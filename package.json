@@ -1,0 +1,31 @@
+{
+  "name": "@blastz/json-to-env",
+  "version": "0.1.0",
+  "description": "Parse json to environment",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "test": "jest",
+    "build": "rm -rf dist && npm run tsc && cp package.json README.md ./dist",
+    "push": "npm run test && npm run build && cd ./dist && npm publish --access public --registry=https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blastZ/json-to-env.git"
+  },
+  "author": "blastz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blastZ/json-to-env/issues"
+  },
+  "homepage": "https://github.com/blastZ/json-to-env#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.9",
+    "@types/node": "^14.0.27",
+    "jest": "^26.2.2",
+    "typescript": "^3.9.7"
+  }
+}
